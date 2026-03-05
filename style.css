@@ -64,6 +64,45 @@ h1 {
     font-style: italic;
 }
 
+/* Team Styling */
+.team-card {
+    text-align: center;
+    padding: 30px !important;
+    margin-bottom: 20px !important;
+}
+
+.badge-small {
+    color: var(--accent);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.team-grid span {
+    background: rgba(0, 242, 255, 0.05);
+    padding: 6px 15px;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--accent);
+    transition: 0.3s;
+}
+
+.team-grid span:hover {
+    background: var(--accent-glow);
+    border-color: var(--accent);
+    color: white;
+}
+
 /* Container & Glass Cards */
 .container {
     max-width: 1000px;
@@ -188,6 +227,14 @@ td {
     color: var(--accent);
 }
 
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.glass-card.small { padding: 30px; }
+
 footer {
     text-align: center;
     padding: 60px;
@@ -196,6 +243,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .reflection-grid { grid-template-columns: 1fr; }
+    .reflection-grid, .footer-grid { grid-template-columns: 1fr; }
     .glass-card { padding: 30px; }
 }
