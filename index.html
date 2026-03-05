@@ -9,8 +9,6 @@
 </head>
 <body>
 
-    <div class="cursor-glow"></div>
-
     <header class="hero">
         <div class="hero-content reveal">
             <span class="badge">ICT Capstone 2026</span>
@@ -20,6 +18,17 @@
     </header>
 
     <main class="container">
+        <section id="team" class="glass-card reveal team-card">
+            <span class="badge-small">Group Members</span>
+            <div class="team-grid">
+                <span>Lunag, Krisfford Yves</span>
+                <span>De Guzman, Kristine</span>
+                <span>Encarnacion, Mel</span>
+                <span>Magno, Johrelle</span>
+                <span>Tobeo, Krishela</span>
+            </div>
+        </section>
+
         <section id="summary" class="glass-card reveal">
             <div class="section-header">
                 <span class="step-num">01</span>
@@ -45,9 +54,9 @@
                     </thead>
                     <tbody>
                         <tr><td>I</td><td>Research & Needs Assessment</td><td>2 weeks</td><td>₱500</td></tr>
-                        <tr><td>II</td><td>Design & Development</td><td>6 weeks</td><td>₱1,500 (software)</td></tr>
+                        <tr><td>II</td><td>Design & Development</td><td>6 weeks</td><td>₱1,500</td></tr>
                         <tr><td>III</td><td>User Testing & Feedback</td><td>3 weeks</td><td>—</td></tr>
-                        <tr><td>IV</td><td>Deployment & Launch</td><td>1 week</td><td>₱4,000 (hosting & misc)</td></tr>
+                        <tr><td>IV</td><td>Deployment & Launch</td><td>1 week</td><td>₱4,000</td></tr>
                     </tbody>
                     <tfoot class="total-row">
                         <tr>
@@ -91,7 +100,7 @@
             <div class="reflection-grid">
                 <div class="q-box">
                     <h3>Process of Completing Project</h3>
-                    <p>Completing the Lumina capstone involved user-centered research, prototyping, testing, and refining features like the panic mechanism and anonymous reporting to ensure they met user needs. The team followed an <strong>Agile user-centered design cycle</strong> where feedback influenced development at each stage.</p>
+                    <p>Completing the Lumina capstone involved user-centered research, prototyping, testing, and refining features like the panic mechanism and anonymous reporting. The team followed an <strong>Agile user-centered design cycle</strong> where feedback influenced development at each stage.</p>
                 </div>
                 <div class="q-box">
                     <h3>Barriers / Obstacles</h3>
@@ -123,7 +132,7 @@
         <div class="footer-grid reveal">
             <div class="glass-card small">
                 <h3>References</h3>
-                <ul class="ref-list">
+                <ul class="ref-list" style="list-style: none; font-size: 0.9rem; opacity: 0.8;">
                     <li>Transparency International (2024)</li>
                     <li>World Justice Project (2023)</li>
                     <li>United Nations (2024)</li>
@@ -131,7 +140,7 @@
             </div>
             <div class="glass-card small">
                 <h3>Appendices</h3>
-                <p>Details on methodology, audience analysis, and key app features like Panic Mode and Privacy-by-Design.</p>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Details on methodology, audience analysis, and key app features like Panic Mode and Privacy-by-Design.</p>
             </div>
         </div>
     </main>
@@ -140,6 +149,15 @@
         <p>Project Lumina &bull; Capstone 2026</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Simple reveal animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
